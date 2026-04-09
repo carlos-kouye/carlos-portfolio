@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Carlos Kouye</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --fond-sombre: #0a0a0f;
+            --violet: #7850ff;
+            --rose: #ff50a0;
+            --texte-clair: #ffffff;
+            --texte-gris: #b0b0b0;
+            --fond-carte: #12121a;
+            --bordure: #2a2a35;
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--fond-sombre);
+            color: var(--texte-clair);
+            line-height: 1.6;
+        }
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: rgba(97, 97, 97, 0.623);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 2px solid rgba(37, 6, 139, 0.644);
+        }
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--texte-clair);
+            text-decoration: none;
+        }
+        .liens-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .liens-nav a {
+            text-decoration: none;
+            color: var(--texte-clair);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .liens-nav a:hover, .liens-nav a.actif {
+            color: var(--violet);
+        }
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background: var(--texte-clair);
+            transition: var(--transition);
+        }
+        @media (max-width: 768px) {
+            .burger {
+                display: flex;
+            }
+            .liens-nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--fond-sombre);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s;
+            }
+            .liens-nav.actif {
+                left: 0;
+            }
+        }
+        /* Contact */
+        .page-contact {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 10px 70px;
+            background-color: rgb(245, 232, 252);
+        }
+        .conteneur-contact {
+            max-width: 500px;
+            width: 80%;
+            height: -100%;
+            background: rgba(218, 159, 241, 0.473);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 20px;
+            border: 1px solid rgba(122, 43, 248, 0.63);
+            animation: fadeInUp 0.8s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+        .sous-titre {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-bottom: 40px;
+        }
+        .groupe-form {
+            margin-bottom: 10px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgb(255, 255, 255);
+            border: 1px solid var(--bordure);
+            border-radius: 12px;
+            color: var(--texte-clair);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--violet);
+            background: #1a1a2a;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        button {
+            width: 50%;
+            padding: 15px;
+            padding-left: 15px;
+            margin-left: 27%;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(120, 80, 255, 0.3);
+        }
+        @media (max-width: 600px) {
+            .conteneur-contact {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Carl<span style="color: rgba(164, 4, 238, 0.877);">Funnel</span></a></div>
+        <ul class="liens-nav">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html" class="actif">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="ligne1"></div>
+            <div class="ligne2"></div>
+            <div class="ligne3"></div>
+        </div>
+    </nav>
+
+    <section class="page-contact">
+        <div class="conteneur-contact">
+            <h1>Parlons de votre projet</h1>
+            <p class="sous-titre">Remplissez le formulaire ci-dessous, je vous répondrai sous 24h.</p>
+            <form action="send_mail.php" method="POST">
+                <div class="groupe-form"><input type="text" name="nom" placeholder="Nom complet" required></div>
+                <div class="groupe-form"><input type="email" name="email" placeholder="Email" required></div>
+                <div class="groupe-form"><input type="tel" name="Tel" placeholder="Téléphone"></div>
+                <button type="submit">Envoyer mon message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.liens-nav').classList.toggle('actif');
+        });
+    </script>
+
+</body>
+</html>
