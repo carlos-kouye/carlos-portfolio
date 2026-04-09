@@ -35,7 +35,7 @@
         </div>
     </nav>
 
-    <!-- SECTION ACCUEIL  -->
+    <!-- SECTION ACCUEIL -->
     <section id="accueil" class="accueil" style="background-image: url(img/fond1.jpeg);">
         <div class="conteneur-accueil">
             <div class="grille-accueil">
@@ -57,7 +57,29 @@
         <div class="fond-accueil"></div>
     </section>
 
-    <!-- SECTION À PROPOS  -->
+    <!-- NOUVEAU : BARRE DÉFILANTE TECHNOLOGIES (AJOUTÉ) -->
+    <section class="tech-bar">
+        <div class="tech-container">
+            <div class="tech-scroll" id="techScroll">
+                <!-- Les éléments défilants (répétés pour l'effet infini) -->
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/systemjs/systemjs-original.svg" alt="system.io" class="tech-icon"><span class="tech-name">Systeme.io</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="tech-icon"><span class="tech-name">Photoshop</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon"><span class="tech-name">VS Code</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon"><span class="tech-name">JavaScript</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-icon"><span class="tech-name">PHP</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon"><span class="tech-name">HTML5</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon"><span class="tech-name">CSS3</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tech-icon"><span class="tech-name">Figma</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" class="tech-icon"><span class="tech-name">Canva</span></div>
+                <!-- Copie pour effet infini -->
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/systemjs/systemjs-original.svg" alt="system.io" class="tech-icon"><span class="tech-name">Systeme.io</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="tech-icon"><span class="tech-name">Photoshop</span></div>
+                <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon"><span class="tech-name">VS Code</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION À PROPOS -->
     <section id="a-propos" class="a-propos">
         <div class="conteneur-apropos">
             <div class="haut-a-propos">
@@ -76,7 +98,7 @@
         </div>
     </section>
 
-    <!--SECTION SERVICES  -->
+    <!-- SECTION SERVICES -->
     <section id="services" class="services">
         <div class="conteneur">
             <h2 class="titre-section">Mes services</h2>
@@ -106,49 +128,121 @@
         </div>
     </section>
 
-    <!-- SECTION RÉALISATIONS (CARROUSEL) -->
+    <!-- SECTION RÉALISATIONS (NOUVELLE VERSION AVEC FLÈCHES ET BOUTON VOIR PLUS) -->
     <section id="realisations" class="realisations">
         <div class="conteneur">
-            <h2 class="titre-section">Mes réalisations</h2>
-            <p class="sous-titre-section">Découvrez mes derniers projets en action</p>
+            <!-- Petit badge RECENT PROJECT (AJOUTÉ) -->
+            <div class="recent-badge">RECENT PROJECT</div>
             
-            <div class="conteneur-carrousel">
-                <div class="carrousel-wrapper" id="carrouselWrapper">
-                    <div class="slide-carrousel">
-                        <div class="photo-realisation">
-                            <img src="img/ma premiere création de tunnel de vente.png" alt="Tunnel webinaire coach sportif">
-                        </div>
-                        <div class="info-realisation">
+            <!-- Grand titre (AJOUTÉ) -->
+            <h2 class="grand-titre-realisations">Tunnels de vente <br> Site web vitrine, bannières</h2>
+            
+            <!-- Grille des projets (3 premiers) -->
+            <div class="grille-projets" id="grilleProjets">
+                
+                <!-- Projet 1 : Tunnel webinaire coach sportif -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="img/ma premiere création de tunnel de vente.png" alt="Tunnel webinaire coach sportif">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
                             <h3>Tunnel webinaire coach sportif</h3>
-                            <p>Page d'inscription optimisée, copywriting vendeur pour maximiser les inscriptions.</p>
-                            <a href="#" class="btn-realisation" data-projet="sport">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                            <p>Page d'inscription optimisée, copywriting vendeur</p>
                         </div>
-                    </div>
-                    <div class="slide-carrousel">
-                        <div class="photo-realisation">
-                            <img src="img/M003T1402 C Long Scroll Extended MacBook Screen Mockup 15Mar25.png" alt="Tunnel Saint-Valentin">
-                        </div>
-                        <div class="info-realisation">
-                            <h3>Tunnel Saint-Valentin</h3>
-                            <p>Tunnel événementiel avec offre limitée dans le temps, fort taux de conversion.</p>
-                            <a href="#" class="btn-realisation" data-projet="valentin">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="slide-carrousel">
-                        <div class="photo-realisation">
-                            <img src="https://placehold.co/400x300/7850ff/ffffff?text=Universitaire" alt="Site web universitaire">
-                        </div>
-                        <div class="info-realisation">
-                            <h3>Site web universitaire</h3>
-                            <p>Architecture claire, navigation intuitive, design moderne.</p>
-                            <a href="#" class="btn-realisation" data-projet="universite">Voir le projet <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        <a href="#" class="lien-projet" data-projet="sport">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="controles-carrousel">
-                    <button class="btn-prev" id="btnPrev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="points-carrousel" id="pointsCarrousel"></div>
-                    <button class="btn-next" id="btnNext"><i class="fas fa-chevron-right"></i></button>
+                
+                <!-- Projet 2 : Tunnel Saint-Valentin -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="img/M003T1402 C Long Scroll Extended MacBook Screen Mockup 15Mar25.png" alt="Tunnel Saint-Valentin">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
+                            <h3>Tunnel Saint-Valentin</h3>
+                            <p>Tunnel événementiel avec offre limitée dans le temps</p>
+                        </div>
+                        <a href="#" class="lien-projet" data-projet="valentin">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 : Site web universitaire -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="https://placehold.co/400x300/7850ff/ffffff?text=Universitaire" alt="Site web universitaire">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
+                            <h3>Site web universitaire</h3>
+                            <p>Architecture claire, navigation intuitive, design moderne</p>
+                        </div>
+                        <a href="#" class="lien-projet" data-projet="universite">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bouton Voir plus / Voir moins (AJOUTÉ) -->
+            <div class="conteneur-btn-plus">
+                <button id="btnVoirPlus" class="btn-plus">Voir plus</button>
+            </div>
+            
+            <!-- Projets supplémentaires (cachés au départ) (AJOUTÉ) -->
+            <div class="grille-projets-plus" id="grilleProjetsPlus" style="display: none;">
+                
+                <!-- Projet 4 -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="https://placehold.co/400x300/ff50a0/ffffff?text=Projet+4" alt="Projet 4">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
+                            <h3>Application Mobile</h3>
+                            <p>UI/UX, React Native</p>
+                        </div>
+                        <a href="#" class="lien-projet" data-projet="projet4">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 5 -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="https://placehold.co/400x300/7850ff/ffffff?text=Projet+5" alt="Projet 5">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
+                            <h3>Dashboard Analytics</h3>
+                            <p>Data visualisation, PHP/MySQL</p>
+                        </div>
+                        <a href="#" class="lien-projet" data-projet="projet5">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Projet 6 -->
+                <div class="carte-projet">
+                    <div class="image-projet">
+                        <img src="https://placehold.co/400x300/ff50a0/ffffff?text=Projet+6" alt="Projet 6">
+                    </div>
+                    <div class="info-projet">
+                        <div class="texte-projet">
+                            <h3>E-commerce</h3>
+                            <p>Prestashop, SEO, Paiement sécurisé</p>
+                        </div>
+                        <a href="#" class="lien-projet" data-projet="projet6">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,30 +274,62 @@
         </div>
     </section>
 
-    <!--SECTION PROCESSUS-->
+    <!-- SECTION PROCESSUS -->
     <section id="processus" class="processus">
         <div class="conteneur">
             <h2 class="titre-section">Comment je travaille</h2>
             <p class="sous-titre-section">Un processus clair et transparent pour te rassurer</p>
             <div class="liste-progressive">
-                <div class="item-liste"><div class="numero-liste">01</div><div class="contenu-liste"><h3>On discute de ton projet</h3><p>Tu m'expliques ton besoin, tes objectifs et tes contraintes. Je pose les bonnes questions pour bien cerner ta vision.</p></div></div>
-                <div class="item-liste"><div class="numero-liste">02</div><div class="contenu-liste"><h3>Je te propose une structure</h3><p>Plan de ta page avec les sections, le copywriting et le design proposé. Tu valides avant de commencer.</p></div></div>
-                <div class="item-liste"><div class="numero-liste">03</div><div class="contenu-liste"><h3>Je crée et je livre</h3><p>Projet livré dans les délais convenus, soigné, testé et prêt à être utilisé immédiatement.</p></div></div>
-                <div class="item-liste"><div class="numero-liste">04</div><div class="contenu-liste"><h3>On ajuste ensemble</h3><p>Révisions jusqu'à satisfaction complète. Ton avis compte et je m'assure que tu sois pleinement satisfait.</p></div></div>
+                <div class="item-liste"><div class="numero-liste">01</div><div class="contenu-liste"><h3>On discute de ton projet</h3><p>Tu m'expliques ton besoin, tes objectifs et tes contraintes. Je pose les bonnes questions pour bien cerner ta vision.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="numero-liste">02</div><div class="contenu-liste"><h3>Je te propose une structure</h3><p>Plan de ta page avec les sections, le copywriting et le design proposé. Tu valides avant de commencer.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="numero-liste">03</div><div class="contenu-liste"><h3>Je crée et je livre</h3><p>Projet livré dans les délais convenus, soigné, testé et prêt à être utilisé immédiatement.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="numero-liste">04</div><div class="contenu-liste"><h3>On ajuste ensemble</h3><p>Révisions jusqu'à satisfaction complète. Ton avis compte et je m'assure que tu sois pleinement satisfait.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--SECTION POURQUOI MOI-->
+    <!-- SECTION POURQUOI MOI -->
     <section id="pourquoi-moi" class="pourquoi-moi">
         <div class="conteneur">
             <h2 class="titre-section">Pourquoi me choisir ?</h2>
             <p class="sous-titre-section">Ce qui fait la différence dans ma façon de travailler</p>
             <div class="liste-progressive">
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-chart-line"></i></div><div class="contenu-liste"><h3>Résultats avant tout</h3><p>Pages pensées pour convertir, pas juste belles. Chaque élément est optimisé pour transformer vos visiteurs en clients.</p></div></div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-layer-group"></i></div><div class="contenu-liste"><h3>Polyvalent et complet</h3><p>Tunnel de vente, site web ou visuel graphique, je m'occupe de tout. Un seul interlocuteur pour tous vos besoins.</p></div></div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-clock"></i></div><div class="contenu-liste"><h3>Réactif et disponible</h3><p>Tu es toujours informé de l'avancement du projet. Réponse rapide et suivi personnalisé.</p></div></div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-hand-holding-usd"></i></div><div class="contenu-liste"><h3>Tarifs adaptés</h3><p>Des prix accessibles aux entrepreneurs d'Afrique francophone. Qualité professionnelle à prix juste.</p></div></div>
+                <div class="item-liste"><div class="icone-liste"><i class="fas fa-chart-line"></i></div><div class="contenu-liste"><h3>Résultats avant tout</h3><p>Pages pensées pour convertir, pas juste belles. Chaque élément est optimisé pour transformer vos visiteurs en clients.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="icone-liste"><i class="fas fa-layer-group"></i></div><div class="contenu-liste"><h3>Polyvalent et complet</h3><p>Tunnel de vente, site web ou visuel graphique, je m'occupe de tout. Un seul interlocuteur pour tous vos besoins.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="icone-liste"><i class="fas fa-clock"></i></div><div class="contenu-liste"><h3>Réactif et disponible</h3><p>Tu es toujours informé de l'avancement du projet. Réponse rapide et suivi personnalisé.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
+                <div class="item-liste"><div class="icone-liste"><i class="fas fa-hand-holding-usd"></i></div><div class="contenu-liste"><h3>Tarifs adaptés</h3><p>Des prix accessibles aux entrepreneurs d'Afrique francophone. Qualité professionnelle à prix juste.</p></div>
+                <div class="barre-progression">
+                <div class="remplissage"></div>
+                </div>
+                </div>
             </div>
         </div>
     </section>
@@ -217,7 +343,7 @@
         </div>
     </section>
 
-    <!--FOIRE AUX QUESTIONS (ACCORDÉON)-->
+    <!-- FOIRE AUX QUESTIONS -->
     <section id="faq" class="faq">
         <div class="conteneur">
             <h2 class="titre-section">Foire aux questions</h2>
@@ -233,7 +359,7 @@
         </div>
     </section>
 
-    <!--PIED DE PAGE-->
+    <!-- PIED DE PAGE -->
     <footer class="pied-page">
         <div class="conteneur">
             <div class="contenu-pied">

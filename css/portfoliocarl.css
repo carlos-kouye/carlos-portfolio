@@ -1,6 +1,6 @@
-/* ========== PORTFOLIO CARLOS KOUYE - DESIGN MODERNE (CLASSES EN FRANÇAIS) ========== */
+/*  PORTFOLIO CARLOS KOUYE - DESIGN MODERNE (CLASSES EN FRANÇAIS)  */
 
-/* ---------- VARIABLES ---------- */
+/* VARIABLES */
 :root {
     --fond-sombre: #0a0a0f;
     --violet: #7850ff;
@@ -14,7 +14,7 @@
     --ombre-survol: 0 20px 40px rgba(120, 80, 255, 0.2);
 }
 
-/* ---------- RESET ---------- */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +44,7 @@ section {
     padding: 80px 0;
 }
 
-/* ---------- TYPOGRAPHIE ---------- */
+/* TYPOGRAPHIE */
 .titre-section {
     font-size: 2.5rem;
     font-weight: 700;
@@ -74,7 +74,573 @@ section {
     font-weight: 600;
 }
 
-/* ---------- BARRE DE NAVIGATION ---------- */
+/*  NOUVEAU : BARRE DÉFILANTE TECHNOLOGIES (AJOUTÉ)  */
+.tech-bar {
+    background: linear-gradient(135deg, rgba(120, 80, 255, 0.05), rgba(193, 208, 240, 0.048));
+    padding: 10px 0;
+    border-top: 1px solid rgba(34, 73, 245, 0.705);
+    border-bottom: 1px solid rgba(34, 73, 245, 0.705);
+    overflow: hidden;
+    width: 100%;
+    margin-top: 3%;
+}
+
+.tech-container {
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.tech-scroll {
+    display: flex;
+    gap: 50px;
+    animation: defilementInfini 20s linear infinite;
+    width: fit-content;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 100px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    background: rgba(120, 80, 255, 0.15);
+}
+
+.tech-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.tech-name {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+}
+
+.tech-item:hover .tech-name {
+    color: #7850ff;
+}
+
+@keyframes defilementInfini {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .tech-scroll {
+        gap: 30px;
+        animation: defilementInfini 25s linear infinite;
+    }
+    .tech-item {
+        min-width: 80px;
+        padding: 8px 15px;
+    }
+    .tech-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .tech-name {
+        font-size: 0.7rem;
+    }
+}
+
+/*  NOUVEAU : SECTION RÉALISATIONS AVEC FLÈCHES (AJOUTÉ)  */
+.recent-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7850ff, #ff50a0);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.grand-titre-realisations {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    line-height: 1.2;
+    color: #fbfbff;
+}
+
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.grille-projets-plus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 0px;
+}
+
+.carte-projet {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.carte-projet:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(121, 80, 255, 0.589);
+}
+
+.image-projet {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.image-projet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carte-projet:hover .image-projet img {
+    transform: scale(1.05);
+}
+
+.info-projet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+
+.texte-projet {
+    flex: 1;
+}
+
+.texte-projet h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #0a0a0f;
+}
+
+.texte-projet p {
+    font-size: 0.85rem;
+    color: #7850ff;
+    font-weight: 500;
+}
+
+.lien-projet {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 50%;
+    color: #7850ff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.lien-projet:hover {
+    background: #7850ff;
+    color: white;
+    transform: translateX(3px);
+}
+
+.lien-projet i {
+    font-size: 1rem;
+}
+
+.conteneur-btn-plus {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-plus {
+    background: transparent;
+    border: 2px solid #7850ff;
+    color: #7850ff;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-plus:hover {
+    background: #7850ff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(120, 80, 255, 0.3);
+}
+
+/* CARTES AVEC BARRE DE PROGRESSION (COMME SUR L'IMAGE) */
+.processus .liste-progressive,
+.pourquoi-moi .liste-progressive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.processus .item-liste,
+.pourquoi-moi .item-liste {
+    background: rgba(18, 18, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(120, 80, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+
+.processus .item-liste:hover,
+.pourquoi-moi .item-liste:hover {
+    transform: translateY(-5px);
+    border-color: #7850ff;
+}
+
+/* BARRE DE PROGRESSION HORIZONTALE (JAUGE) */
+.barre-progression {
+    width: 100%;
+    height: 8px;
+    background: #2a2a35;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 5px;
+}
+
+.barre-progression .remplissage {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #7850ff, #ff50a0);
+    border-radius: 10px;
+    transition: width 1.5s ease-out;
+}
+
+/* Numéro et icône */
+.processus .numero-liste,
+.pourquoi-moi .icone-liste {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #7850ff, #ff50a0);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.processus .contenu-liste h3,
+.pourquoi-moi .contenu-liste h3 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.processus .contenu-liste p,
+.pourquoi-moi .contenu-liste p {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .processus .liste-progressive,
+    .pourquoi-moi .liste-progressive {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .processus .item-liste,
+    .pourquoi-moi .item-liste {
+        text-align: center;
+        align-items: center;
+    }
+}
+/*  RESPONSIVE MOBILE COMPLET (AMÉLIORÉ)  */
+@media (max-width: 992px) {
+    .grille-projets,
+    .grille-projets-plus {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grand-titre-realisations {
+        font-size: 2rem;
+    }
+    .processus .liste-progressive,
+    .pourquoi-moi .liste-progressive {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Espacement général */
+    section {
+        padding: 50px 0;
+    }
+    
+    .conteneur {
+        padding: 0 16px;
+    }
+    
+    /* Titres */
+    .titre-section {
+        font-size: 1.8rem;
+    }
+    
+    .sous-titre-section {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Hero */
+    .accueil {
+        padding-top: 80px;
+        min-height: auto;
+        border-radius: 0 0 30px 30px;
+    }
+    
+    .titre-accueil {
+        font-size: 1.8rem;
+        padding-top: 0;
+    }
+    
+    .sous-titre-accueil {
+        font-size: 0.95rem;
+    }
+    
+    .boutons-accueil {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn-principal, .btn-secondaire {
+        width: 80%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+    
+    /* À propos */
+    .conteneur-apropos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .haut-a-propos {
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    
+    .cadre-image {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .contenu-a-propos {
+        text-align: center;
+        padding-right: 0;
+        margin-left: 0;
+    }
+    
+    .contenu-a-propos .titre-section {
+        text-align: center !important;
+    }
+    
+    /* Services */
+    .grille-services {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .carte-service {
+        padding: 20px;
+    }
+    
+    /* Réalisations */
+    .recent-badge {
+        font-size: 0.7rem;
+        display: table;
+        margin: 0 auto 15px auto;
+    }
+    
+    .grand-titre-realisations {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .grille-projets,
+    .grille-projets-plus {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .image-projet {
+        height: 200px;
+    }
+    
+    .texte-projet h3 {
+        font-size: 1rem;
+    }
+    
+    .texte-projet p {
+        font-size: 0.75rem;
+    }
+    
+    .lien-projet {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .btn-plus {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+    
+    /* Processus et pourquoi moi */
+    .processus .liste-progressive,
+    .pourquoi-moi .liste-progressive {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .processus .item-liste,
+    .pourquoi-moi .item-liste {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+    
+    .processus .numero-liste,
+    .pourquoi-moi .icone-liste {
+        margin: 0 auto;
+    }
+    
+    .processus .contenu-liste h3,
+    .pourquoi-moi .contenu-liste h3 {
+        font-size: 1.1rem;
+    }
+    
+    .processus .contenu-liste p,
+    .pourquoi-moi .contenu-liste p {
+        font-size: 0.85rem;
+    }
+    
+    /* Compétences */
+    .item-competence {
+        margin-bottom: 20px;
+    }
+    
+    .info-competence {
+        font-size: 0.85rem;
+    }
+    
+    /* FAQ */
+    .question-faq h3 {
+        font-size: 0.95rem;
+    }
+    
+    .reponse-faq p {
+        font-size: 0.85rem;
+    }
+    
+    /* CTA */
+    .cta {
+        margin: 20px;
+    }
+    
+    .cta .conteneur {
+        padding: 40px 20px;
+    }
+    
+    .cta h2 {
+        font-size: 1.3rem;
+    }
+    
+    .cta p {
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .contenu-pied {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .info-pied h3 {
+        font-size: 1.2rem;
+    }
+    
+    .info-pied p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titre-accueil {
+        font-size: 1.5rem;
+    }
+    
+    .titre-section {
+        font-size: 1.5rem;
+    }
+    
+    .grand-titre-realisations {
+        font-size: 1.3rem;
+    }
+    
+    .btn-principal, .btn-secondaire {
+        width: 100%;
+    }
+    
+    .info-projet {
+        padding: 12px;
+    }
+    
+    .lien-projet {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .lien-projet i {
+        font-size: 0.8rem;
+    }
+}
+
+/* BARRE DE NAVIGATION */
 .navbar {
     position: fixed;
     top: 0;
@@ -140,7 +706,7 @@ section {
     width: 100%;
 }
 
-/* ---------- MENU BURGER ---------- */
+/* MENU BURGER */
 .burger {
     display: none;
     cursor: pointer;
@@ -190,7 +756,7 @@ section {
     }
 }
 
-/* ---------- ACCUEIL ---------- */
+/* ACCUEIL */
 .accueil {
     min-height: 98.5vh;
     display: flex;
@@ -267,7 +833,7 @@ section {
     }
 }
 
-/* ---------- À PROPOS ---------- */
+/* À PROPOS */
 .conteneur-apropos{
     display: flex;
 }
@@ -371,111 +937,11 @@ section {
     }
 }
 
-/* ---------- REALISATIONS ---------- */
-.realisations {
-    background-color: rgba(40, 97, 255, 0.61);
-}
+/* REALISATIONS (ancien carrousel - à supprimer si tu remplaces par la nouvelle version) */
+/* La section réalisation a été complètement remplacée par la nouvelle version avec grille et bouton voir plus */
+/* Les styles ci-dessous sont pour la nouvelle version (déjà ajoutés plus haut) */
 
-.conteneur-carrousel {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.carrousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.slide-carrousel {
-    flex: 0 0 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-    padding: 20px;
-}
-
-.photo-realisation img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.info-realisation p {
-    color: rgb(255, 255, 255);
-}
-
-.btn-realisation {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    color: var(--violet);
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    border: 2px solid var(--violet);
-    transition: var(--transition);
-}
-
-.btn-realisation:hover {
-    background: var(--violet);
-    color: white;
-    gap: 15px;
-}
-
-.controles-carrousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.btn-prev, .btn-next {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: var(--fond-carte);
-    border: 1px solid var(--bordure);
-    color: var(--texte-clair);
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-prev:hover, .btn-next:hover {
-    background: var(--violet);
-}
-
-.point {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--bordure);
-    cursor: pointer;
-    transition: var(--transition);
-    margin: 0 5px;
-}
-
-.point.actif {
-    background: var(--violet);
-    transform: scale(1.2);
-}
-
-@media (max-width: 768px) {
-    .slide-carrousel {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 20px;
-    }
-}
-
-/* ---------- COMPÉTENCES ---------- */
+/* COMPÉTENCES */
 .grille-competences {
     max-width: 800px;
     margin: 0 auto;
@@ -506,7 +972,7 @@ section {
     transition: width 1s ease;
 }
 
-/* ---------- LISTES PROGRESSIVES ---------- */
+/* LISTES PROGRESSIVES */
 .pourquoi-moi{
     background-color: rgba(40, 97, 255, 0.61);
 }
@@ -518,6 +984,7 @@ section {
     margin: 0 auto;
 }
 
+/* Styles de base pour les listes (conservés mais adaptés pour les nouvelles cartes) */
 .item-liste {
     display: flex;
     gap: 25px;
@@ -537,51 +1004,7 @@ section {
     transform: translateY(0);
 }
 
-.icone-liste, .numero-liste {
-    width: 55px;
-    height: 55px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--violet), var(--rose));
-    border-radius: 50%;
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: white;
-}
-
-.icone-liste i {
-    font-size: 1.5rem;
-    color: white;
-}
-
-.contenu-liste {
-    flex: 1;
-}
-
-.contenu-liste h3 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
-}
-
-.contenu-liste p {
-    color: var(--texte-gris);
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .item-liste {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    .icone-liste, .numero-liste {
-        margin: 0 auto;
-    }
-}
-
-/* ---------- APPEL À L'ACTION ---------- */
+/* APPEL À L'ACTION */
 .cta {
     text-align: center;
     background: linear-gradient(135deg, rgba(116, 75, 253, 0.397), rgba(214, 80, 255, 0.493));
@@ -603,7 +1026,7 @@ section {
     margin-bottom: 30px;
 }
 
-/* ---------- BOUTONS ---------- */
+/* BOUTONS */
 .btn-principal {
     background: linear-gradient(135deg, var(--violet), var(--rose));
     color: white;
@@ -640,7 +1063,7 @@ section {
     transform: translateY(-3px);
 }
 
-/* ---------- FOIRE AUX QUESTIONS ---------- */
+/* FOIRE AUX QUESTIONS */
 .faq {
     background: var(--fond-sombre);
 }
@@ -705,7 +1128,7 @@ section {
     margin: 0;
 }
 
-/* ---------- PIED DE PAGE ---------- */
+/* PIED DE PAGE */
 .pied-page {
     background: var(--fond-carte);
     padding: 60px 0 20px;
@@ -737,11 +1160,13 @@ section {
     justify-content: center;
     color: var(--texte-clair);
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .reseaux-pied a:hover {
     background: var(--violet);
     transform: translateY(-3px);
+    text-decoration: none;
 }
 
 .bas-pied {

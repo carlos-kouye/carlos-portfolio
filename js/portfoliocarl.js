@@ -1,4 +1,4 @@
-//  MENU BURGER 
+// MENU BURGER 
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const liensNav = document.querySelector('.liens-nav');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-//  LIENS DOUX (SMOOTH SCROLL) & NAVIGATION ACTIVE 
+// LIENS DOUX (SMOOTH SCROLL) & NAVIGATION ACTIVE 
 document.querySelectorAll('.liens-nav a[href^="#"]').forEach(ancre => {
     ancre.addEventListener('click', function(e) {
         e.preventDefault();
@@ -49,7 +49,8 @@ window.addEventListener('scroll', () => {
     });
 });
 
-//  CARROUSEL 
+// CARROUSEL (ancienne version - à supprimer si tu ne l'utilises plus)
+/* Ce code est conservé pour compatibilité mais la nouvelle section réalisations n'utilise plus le carrousel
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.getElementById('carrouselWrapper');
     const btnPrev = document.getElementById('btnPrev');
@@ -89,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         allerAuSlide(0);
     }
 });
+*/
 
-//  OBSERVATEUR D'INTERSECTION (LISTES) 
+// OBSERVATEUR D'INTERSECTION (LISTES) 
 document.addEventListener('DOMContentLoaded', () => {
     const observateur = new IntersectionObserver((entrees) => {
         entrees.forEach(entree => {
@@ -103,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.item-liste').forEach(el => observateur.observe(el));
 });
 
-//  ACCORDÉONS FAQ 
+// ACCORDÉONS FAQ 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.question-faq').forEach(question => {
         question.addEventListener('click', () => {
@@ -111,4 +113,76 @@ document.addEventListener('DOMContentLoaded', () => {
             if (itemFaq) itemFaq.classList.toggle('actif');
         });
     });
+});
+
+// NOUVEAU : BOUTON VOIR PLUS (RÉALISATIONS) (AJOUTÉ) 
+document.addEventListener('DOMContentLoaded', function() {
+    const btnVoirPlus = document.getElementById('btnVoirPlus');
+    const grilleProjetsPlus = document.getElementById('grilleProjetsPlus');
+    
+    if (btnVoirPlus && grilleProjetsPlus) {
+        btnVoirPlus.addEventListener('click', function() {
+            if (grilleProjetsPlus.style.display === 'none' || grilleProjetsPlus.style.display === '') {
+                grilleProjetsPlus.style.display = 'grid';
+                btnVoirPlus.textContent = 'Voir moins';
+                btnVoirPlus.style.background = '#7850ff';
+                btnVoirPlus.style.color = 'white';
+            } else {
+                grilleProjetsPlus.style.display = 'none';
+                btnVoirPlus.textContent = 'Voir plus';
+                btnVoirPlus.style.background = 'transparent';
+                btnVoirPlus.style.color = '#7850ff';
+            }
+        });
+    }
+});
+
+// NOUVEAU : GESTION DES FLÈCHES (REDIRECTION) (AJOUTÉ) 
+document.addEventListener('DOMContentLoaded', function() {
+    const liensProjet = document.querySelectorAll('.lien-projet');
+    
+    liensProjet.forEach(lien => {
+        lien.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projet = this.getAttribute('data-projet');
+            // Redirige vers la page du projet
+            // Exemple : window.location.href = 'projet-' + projet + '.html';
+            console.log('Voir le projet : ' + projet);
+            // Tu peux remplacer par une vraie redirection
+            // window.location.href = 'projet.html?id=' + projet;
+        });
+    });
+});
+// BARRES DE PROGRESSION AU SCROLL 
+document.addEventListener('DOMContentLoaded', () => {
+    const barres = document.querySelectorAll('.barre-progression .remplissage');
+
+    const observerBarres = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Définir un pourcentage différent selon la carte
+                const carte = entry.target.closest('.item-liste');
+                let pourcentage = 70; // valeur par défaut
+
+                if (carte) {
+                    const numero = carte.querySelector('.numero-liste')?.innerText;
+                    const texte = carte.querySelector('.contenu-liste h3')?.innerText;
+                    
+                    if (numero === '01' || texte?.includes('discute')) pourcentage = 85;
+                    if (numero === '02' || texte?.includes('structure')) pourcentage = 75;
+                    if (numero === '03' || texte?.includes('crée')) pourcentage = 95;
+                    if (numero === '04' || texte?.includes('ajuste')) pourcentage = 100;
+                    if (texte?.includes('Résultats')) pourcentage = 90;
+                    if (texte?.includes('Polyvalent')) pourcentage = 85;
+                    if (texte?.includes('Réactif')) pourcentage = 95;
+                    if (texte?.includes('Tarifs')) pourcentage = 80;
+                }
+
+                entry.target.style.width = pourcentage + '%';
+                observerBarres.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    barres.forEach(barre => observerBarres.observe(barre));
 });
