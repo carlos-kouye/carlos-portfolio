@@ -75,6 +75,80 @@
             background: var(--texte-clair);
             transition: var(--transition);
         }
+        /* Contact */
+        .page-contact {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 80px;
+        }
+        .conteneur-contact {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(218, 159, 241, 0.473);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 40px;
+            border: 1px solid rgba(122, 43, 248, 0.63);
+            animation: fadeInUp 0.8s ease;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+        }
+        .sous-titre {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-bottom: 30px;
+        }
+        .groupe-form {
+            margin-bottom: 15px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgb(255, 255, 255);
+            border: 1px solid var(--bordure);
+            border-radius: 12px;
+            color: #333;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--violet);
+            background: #f5f5f5;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--violet), var(--rose));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(120, 80, 255, 0.3);
+        }
         @media (max-width: 768px) {
             .burger {
                 display: flex;
@@ -94,90 +168,32 @@
             .liens-nav.actif {
                 left: 0;
             }
-        }
-        /* Contact */
-        .page-contact {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 10px 70px;
-            background-color: rgb(245, 232, 252);
-        }
-        .conteneur-contact {
-            max-width: 500px;
-            width: 80%;
-            height: -100%;
-            background: rgba(218, 159, 241, 0.473);
-            backdrop-filter: blur(10px);
-            border-radius: 30px;
-            padding: 20px;
-            border: 1px solid rgba(122, 43, 248, 0.63);
-            animation: fadeInUp 0.8s ease;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        h1 {
-            font-size: 30px;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, var(--violet), var(--rose));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-align: center;
-        }
-        .sous-titre {
-            text-align: center;
-            color: rgb(0, 0, 0);
-            margin-bottom: 40px;
-        }
-        .groupe-form {
-            margin-bottom: 10px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 15px;
-            background: rgb(255, 255, 255);
-            border: 1px solid var(--bordure);
-            border-radius: 12px;
-            color: var(--texte-clair);
-            font-family: inherit;
-            transition: var(--transition);
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--violet);
-            background: #1a1a2a;
-        }
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        button {
-            width: 50%;
-            padding: 15px;
-            padding-left: 15px;
-            margin-left: 27%;
-            background: linear-gradient(135deg, var(--violet), var(--rose));
-            border: none;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(120, 80, 255, 0.3);
-        }
-        @media (max-width: 600px) {
+            .page-contact {
+                padding: 100px 15px 60px;
+            }
             .conteneur-contact {
-                padding: 30px 20px;
+                padding: 30px 25px;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.6rem;
+            }
+            button {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .conteneur-contact {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 1.4rem;
+            }
+            .sous-titre {
+                font-size: 0.9rem;
+            }
+            input, textarea {
+                padding: 12px 15px;
             }
         }
     </style>
@@ -204,7 +220,8 @@
             <form action="send_mail.php" method="POST">
                 <div class="groupe-form"><input type="text" name="nom" placeholder="Nom complet" required></div>
                 <div class="groupe-form"><input type="email" name="email" placeholder="Email" required></div>
-                <div class="groupe-form"><input type="tel" name="Tel" placeholder="Téléphone"></div>
+                <div class="groupe-form"><input type="tel" name="telephone" placeholder="Téléphone"></div>
+                <div class="groupe-form"><textarea name="message" placeholder="Votre message" required></textarea></div>
                 <button type="submit">Envoyer mon message</button>
             </form>
         </div>

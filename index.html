@@ -40,11 +40,21 @@
         <div class="conteneur-accueil">
             <div class="grille-accueil">
                 <div class="texte-accueil">
-                    <h1 class="titre-accueil">Je transforme tes idées en <span class="texte-degrade">pages qui vendent</span> et en sites qui impressionnent</h1>
-                    <p class="sous-titre-accueil">Créateur de tunnels de vente, sites web et visuels percutants. Je donne à ton business la présence en ligne qu'il mérite.</p>
+                    <!-- Version desktop (visible sur grand écran) -->
+                    <div class="desktop-text">
+                        <h1 class="titre-accueil">Je transforme tes idées en <span class="texte-degrade">pages qui vendent</span> et en sites <br> qui impressionnent</h1>
+                        <p class="sous-titre-accueil">Créateur de tunnels de vente, sites web et visuels percutants. Je donne à ton business la présence en ligne qu'il mérite.</p>
+                    </div>
+    
+                    <!-- Version mobile (visible uniquement sur téléphone) -->
+                    <div class="mobile-text">
+                        <h1 class="titre-accueil-mobile">Je suis <span class="texte-degrade">Carlos Kouye</span></h1>
+                        <p class="sous-titre-accueil-mobile">Votre funnel builder | développeur web | graphiste</p>
+                    </div>
+    
                     <div class="boutons-accueil">
                         <a href="contact.html" class="btn-principal">Me contacter</a>
-                        <a href="#services" class="btn-secondaire">Découvrir mes services</a>
+                        <a href="#services" class="btn-secondaire">Voir plus </a>
                     </div>
                 </div>
                 <div class="image-accueil">
@@ -57,11 +67,10 @@
         <div class="fond-accueil"></div>
     </section>
 
-    <!-- NOUVEAU : BARRE DÉFILANTE TECHNOLOGIES (AJOUTÉ) -->
+    <!-- BARRE DÉFILANTE TECHNOLOGIES -->
     <section class="tech-bar">
         <div class="tech-container">
             <div class="tech-scroll" id="techScroll">
-                <!-- Les éléments défilants (répétés pour l'effet infini) -->
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/systemjs/systemjs-original.svg" alt="system.io" class="tech-icon"><span class="tech-name">Systeme.io</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="tech-icon"><span class="tech-name">Photoshop</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon"><span class="tech-name">VS Code</span></div>
@@ -71,7 +80,6 @@
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-icon"><span class="tech-name">CSS3</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="tech-icon"><span class="tech-name">Figma</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" class="tech-icon"><span class="tech-name">Canva</span></div>
-                <!-- Copie pour effet infini -->
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/systemjs/systemjs-original.svg" alt="system.io" class="tech-icon"><span class="tech-name">Systeme.io</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" class="tech-icon"><span class="tech-name">Photoshop</span></div>
                 <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" class="tech-icon"><span class="tech-name">VS Code</span></div>
@@ -93,7 +101,8 @@
                 <h2 class="titre-section" style="text-align: left;">Qui suis-je ?</h2>
                 <p>Je suis <span class="surbrillance">Carlos Kouye</span>, créateur de tunnels de vente et concepteur web. Étudiant en génie informatique, je combine ma passion pour la technologie et le marketing digital pour aider les entrepreneurs francophones à se démarquer en ligne.</p>
                 <p>J'accompagne mes clients dans la création de pages de vente, sites vitrines et visuels publicitaires. Mon approche : des créations professionnelles, livrées rapidement, qui donnent des résultats concrets.</p>
-                <p>Ce qui me différencie ? Je ne fais pas que du beau — je crée des pages pensées pour convertir, avec une attention particulière au copywriting et à l'expérience utilisateur.</p>
+                <p>Ce qui me différencie ? Je ne fais pas que du beau  je crée des pages pensées pour convertir, avec une attention particulière au copywriting et à l'expérience utilisateur.</p>
+                <a href="contact.html" class="boutons-apropos">Me contacter<i class="fas fa-arrow-right" style="padding-left: 0%; color: rgba(43, 70, 226, 0.692);"></i></a>
             </div>
         </div>
     </section>
@@ -128,19 +137,12 @@
         </div>
     </section>
 
-    <!-- SECTION RÉALISATIONS (NOUVELLE VERSION AVEC FLÈCHES ET BOUTON VOIR PLUS) -->
+    <!-- SECTION RÉALISATIONS -->
     <section id="realisations" class="realisations">
         <div class="conteneur">
-            <!-- Petit badge RECENT PROJECT (AJOUTÉ) -->
             <div class="recent-badge">RECENT PROJECT</div>
-            
-            <!-- Grand titre (AJOUTÉ) -->
             <h2 class="grand-titre-realisations">Tunnels de vente <br> Site web vitrine, bannières</h2>
-            
-            <!-- Grille des projets (3 premiers) -->
             <div class="grille-projets" id="grilleProjets">
-                
-                <!-- Projet 1 : Tunnel webinaire coach sportif -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="img/ma premiere création de tunnel de vente.png" alt="Tunnel webinaire coach sportif">
@@ -155,8 +157,6 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Projet 2 : Tunnel Saint-Valentin -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="img/M003T1402 C Long Scroll Extended MacBook Screen Mockup 15Mar25.png" alt="Tunnel Saint-Valentin">
@@ -171,8 +171,6 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Projet 3 : Site web universitaire -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="https://placehold.co/400x300/7850ff/ffffff?text=Universitaire" alt="Site web universitaire">
@@ -188,16 +186,10 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Bouton Voir plus / Voir moins (AJOUTÉ) -->
             <div class="conteneur-btn-plus">
                 <button id="btnVoirPlus" class="btn-plus">Voir plus</button>
             </div>
-            
-            <!-- Projets supplémentaires (cachés au départ) (AJOUTÉ) -->
             <div class="grille-projets-plus" id="grilleProjetsPlus" style="display: none;">
-                
-                <!-- Projet 4 -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="https://placehold.co/400x300/ff50a0/ffffff?text=Projet+4" alt="Projet 4">
@@ -212,8 +204,6 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Projet 5 -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="https://placehold.co/400x300/7850ff/ffffff?text=Projet+5" alt="Projet 5">
@@ -228,8 +218,6 @@
                         </a>
                     </div>
                 </div>
-                
-                <!-- Projet 6 -->
                 <div class="carte-projet">
                     <div class="image-projet">
                         <img src="https://placehold.co/400x300/ff50a0/ffffff?text=Projet+6" alt="Projet 6">
@@ -274,65 +262,81 @@
         </div>
     </section>
 
-    <!-- SECTION PROCESSUS -->
+    <!-- SECTION PROCESSUS - TIMELINE VERTICALE -->
     <section id="processus" class="processus">
         <div class="conteneur">
             <h2 class="titre-section">Comment je travaille</h2>
             <p class="sous-titre-section">Un processus clair et transparent pour te rassurer</p>
-            <div class="liste-progressive">
-                <div class="item-liste"><div class="numero-liste">01</div><div class="contenu-liste"><h3>On discute de ton projet</h3><p>Tu m'expliques ton besoin, tes objectifs et tes contraintes. Je pose les bonnes questions pour bien cerner ta vision.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
+            <div class="timeline-processus">
+                <div class="timeline-item">
+                    <div class="timeline-numero">01</div>
+                    <div class="timeline-contenu">
+                        <h3>On discute de ton projet</h3>
+                        <p>Tu m'expliques ton besoin, tes objectifs et tes contraintes. Je pose les bonnes questions pour bien cerner ta vision.</p>
+                    </div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-numero">02</div>
+                    <div class="timeline-contenu">
+                        <h3>Je te propose une structure</h3>
+                        <p>Plan de ta page avec les sections, le copywriting et le design proposé. Tu valides avant de commencer.</p>
+                    </div>
                 </div>
-                <div class="item-liste"><div class="numero-liste">02</div><div class="contenu-liste"><h3>Je te propose une structure</h3><p>Plan de ta page avec les sections, le copywriting et le design proposé. Tu valides avant de commencer.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
+                <div class="timeline-item">
+                    <div class="timeline-numero">03</div>
+                    <div class="timeline-contenu">
+                        <h3>Je crée et je livre</h3>
+                        <p>Projet livré dans les délais convenus, soigné, testé et prêt à être utilisé immédiatement.</p>
+                    </div>
                 </div>
-                </div>
-                <div class="item-liste"><div class="numero-liste">03</div><div class="contenu-liste"><h3>Je crée et je livre</h3><p>Projet livré dans les délais convenus, soigné, testé et prêt à être utilisé immédiatement.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
-                </div>
-                </div>
-                <div class="item-liste"><div class="numero-liste">04</div><div class="contenu-liste"><h3>On ajuste ensemble</h3><p>Révisions jusqu'à satisfaction complète. Ton avis compte et je m'assure que tu sois pleinement satisfait.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
-                </div>
+                <div class="timeline-item">
+                    <div class="timeline-numero">04</div>
+                    <div class="timeline-contenu">
+                        <h3>On ajuste ensemble</h3>
+                        <p>Révisions jusqu'à satisfaction complète. Ton avis compte et je m'assure que tu sois pleinement satisfait.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION POURQUOI MOI -->
-    <section id="pourquoi-moi" class="pourquoi-moi">
-        <div class="conteneur">
-            <h2 class="titre-section">Pourquoi me choisir ?</h2>
-            <p class="sous-titre-section">Ce qui fait la différence dans ma façon de travailler</p>
-            <div class="liste-progressive">
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-chart-line"></i></div><div class="contenu-liste"><h3>Résultats avant tout</h3><p>Pages pensées pour convertir, pas juste belles. Chaque élément est optimisé pour transformer vos visiteurs en clients.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
+<!-- SECTION POURQUOI MOI - LISTE MODERNE -->
+<section id="pourquoi-moi" class="pourquoi-moi">
+    <div class="conteneur">
+        <h2 class="titre-section">Pourquoi me choisir ?</h2>
+        <p class="sous-titre-section">Ce qui fait la différence dans ma façon de travailler</p>
+        <div class="liste-pourquoi">
+            <div class="item-pourquoi">
+                <div class="icone-pourquoi"><i class="fas fa-chart-line"></i></div>
+                <div class="texte-pourquoi">
+                    <h3>Résultats avant tout</h3>
+                    <p>Pages pensées pour convertir, pas juste belles. Chaque élément est optimisé pour transformer vos visiteurs en clients.</p>
                 </div>
+            </div>
+            <div class="item-pourquoi">
+                <div class="icone-pourquoi"><i class="fas fa-layer-group"></i></div>
+                <div class="texte-pourquoi">
+                    <h3>Polyvalent et complet</h3>
+                    <p>Tunnel de vente, site web ou visuel graphique, je m'occupe de tout. Un seul interlocuteur pour tous vos besoins.</p>
                 </div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-layer-group"></i></div><div class="contenu-liste"><h3>Polyvalent et complet</h3><p>Tunnel de vente, site web ou visuel graphique, je m'occupe de tout. Un seul interlocuteur pour tous vos besoins.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
+            </div>
+            <div class="item-pourquoi">
+                <div class="icone-pourquoi"><i class="fas fa-clock"></i></div>
+                <div class="texte-pourquoi">
+                    <h3>Réactif et disponible</h3>
+                    <p>Tu es toujours informé de l'avancement du projet. Réponse rapide et suivi personnalisé.</p>
                 </div>
-                </div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-clock"></i></div><div class="contenu-liste"><h3>Réactif et disponible</h3><p>Tu es toujours informé de l'avancement du projet. Réponse rapide et suivi personnalisé.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
-                </div>
-                </div>
-                <div class="item-liste"><div class="icone-liste"><i class="fas fa-hand-holding-usd"></i></div><div class="contenu-liste"><h3>Tarifs adaptés</h3><p>Des prix accessibles aux entrepreneurs d'Afrique francophone. Qualité professionnelle à prix juste.</p></div>
-                <div class="barre-progression">
-                <div class="remplissage"></div>
-                </div>
+            </div>
+            <div class="item-pourquoi">
+                <div class="icone-pourquoi"><i class="fas fa-hand-holding-usd"></i></div>
+                <div class="texte-pourquoi">
+                    <h3>Tarifs adaptés</h3>
+                    <p>Des prix accessibles aux entrepreneurs d'Afrique francophone. Qualité professionnelle à prix juste.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- APPEL À L'ACTION -->
     <section class="cta">   
@@ -365,7 +369,7 @@
             <div class="contenu-pied">
                 <div class="info-pied">
                     <h3>Carlos Kouye</h3>
-                    <p>Créateur de tunnels de vente et développeur web</p>
+                    <p>funnel builder | développeur web | graphiste</p>
                 </div>
                 <div class="reseaux-pied">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
